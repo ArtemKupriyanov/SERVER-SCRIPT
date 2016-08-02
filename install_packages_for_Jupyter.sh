@@ -1,4 +1,11 @@
 #!/bin/bash
+source 'config.txt'
+#creating enviroment
+echo -e "$passwd\n$passwd" | sudo passwd ubuntu
+sudo -s
+perl -i -p -e 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+exit
+sudo /etc/init.d/ssh restart
 # install packages
 sudo apt-get update
 sudo apt-get -qq install -y make build-essential git
@@ -8,7 +15,7 @@ export PATH=~/anaconda/bin:$PATH
 conda update -y --all
 conda install -y gensim
 pip install -y xgboost
-echo -e "from IPython.lib import passwd\nimport sys\nsys.stdout.write(passwd('root'))" > passwd.py
+echo -e "from IPython.lib import passwd\nimport sys\nsys.stdout.write(passwd('$passwd'))" > passwd.py
 python passwd.py > sha.txt
 openssl req -batch -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
 jupyter notebook --generate-config

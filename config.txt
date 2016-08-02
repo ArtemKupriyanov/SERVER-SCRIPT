@@ -1,4 +1,4 @@
 #path to your pemfile
 pemfile=~/Desktop/keys/aws/NVirginia_key_1st.pem
 #public IP your server
-publicIP=174.129.60.114
+publicIP=54.204.202.46
