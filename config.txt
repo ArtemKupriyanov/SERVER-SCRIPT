@@ -1,6 +1,6 @@
 #path to your pemfile
 pemfile=~/Desktop/keys/aws/NVirginia_key_1st.pem
 #public IP your server
-publicIP=54.227.23.141
+publicIP=54.87.222.88
 #password for Jupyter and server
 passwd=mipt

@@ -13,11 +13,13 @@ wget -c http://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh
 bash Anaconda3-4.1.1-Linux-x86_64.sh -b -p ~/anaconda/
 export PATH=~/anaconda/bin:$PATH
 conda update --all --yes
+sudo apt-get install -y python-qt4
 conda install --yes gensim
 conda install --yes seaborn
 export PATH=~/anaconda/bin:$PATH
 sudo apt-get -y install python-pip
 pip install xgboost
+pip install keras
 echo -e "from IPython.lib import passwd\nimport sys\nsys.stdout.write(passwd('$passwd'))" > passwd.py
 python passwd.py > sha.txt
 openssl req -batch -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
