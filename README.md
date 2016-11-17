@@ -18,13 +18,13 @@
 ***open_server_console.sh***, который просто подключается к указанному вами в ***config.txt*** серверу.
 
 
- **4.** Для загрузки файлов на сервер используйте скрипт ***load_file_to_server.sh. *** Его синтаксис:
-***sh load_file.sh file_1 file_2 file_3 ... ***
+ **4.** Для загрузки файлов на сервер используйте скрипт ***load_file_to_server.sh.*** Его синтаксис:
+***sh load_file.sh file_1 file_2 file_3 ...***
 где ***file_i*** - путь на вашем компьютере до файла. Все файлы загружаются в ***~/***.  
 
 
  **5.** Для скачивания файлов с сервера используйте скрипт ***save_file.sh.*** Его синтаксис:
-***sh save_file_from_server.sh PATH_IN_YOUR_COMPUTER file_1 file_2 file_3 ***
+***sh save_file_from_server.sh PATH_IN_YOUR_COMPUTER file_1 file_2 file_3***
 где ***file_i*** - это ПОЛНЫЙ ПУТЬ К ФАЙЛУ. Например, это ***/home/ubuntu/...***
 
 
